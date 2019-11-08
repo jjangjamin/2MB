@@ -10,88 +10,66 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:layout_marginLeft="70dp">
+        android:layout_marginLeft="70dp"
+        android:id="@+id/textsfamily"
+        android:layout_marginTop="70dp">
 
         <TextView
+            android:id="@+id/welcometext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/welcometext"
-            android:text="환영합니다."
-            android:textSize="45dp"
             android:fontFamily="@font/ridibatang"
-            android:textColor="@color/blue" />
+            android:text="임재민 님의 의료기록"
+            android:textColor="@color/blue"
+            android:textSize="30dp" />
+
         <TextView
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/welcometext"
-            android:textSize="15dp"
             android:layout_marginTop="7dp"
             android:fontFamily="@font/ridibatang"
-            android:text="2MB에 접속하셨습니다.\n이제 자신의 의료 기록을 조회하실
-수 있고 \n나의 정보를 열람하실 수 있습니다."></TextView>
+            android:text="임재민 님의 전체 의료기룍 등록 및 수정 정보입니다."
+            android:textSize="15dp"></TextView>
     </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonkit"
-        android:layout_marginTop="320dp"
-        android:layout_marginLeft="10dp"
-        android:gravity="center">
-
-        <ImageView
-            android:id="@+id/qrscan"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
-            app:srcCompat="@drawable/selector_state1" />
-
-        <ImageView
-            android:id="@+id/myinfo"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="25dp"
-            app:srcCompat="@drawable/myinfo" />
-
-        <ImageView
-            android:id="@+id/tutorial"
-            android:layout_width="87dp"
-            android:layout_height="87dp"
-            android:layout_marginLeft="22dp"
-            app:srcCompat="@drawable/tutorial" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textfamily"
-        android:layout_marginTop="410dp"
-        android:layout_marginRight="30dp"
-        android:gravity="center"
-        android:orientation="horizontal">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="50dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:gravity="center"
+    android:layout_below="@id/textsfamily">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="본인인증"
+            android:layout_marginTop="7dp"
             android:fontFamily="@font/ridibatang"
-            android:layout_marginLeft="32dp"
-            android:textSize="15dp"></TextView>
+            android:text="1997.03.21"
+            android:textColor="@color/blue"
+            android:textSize="18dp"></TextView>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="나의 정보"
+            android:layout_marginTop="30dp"
             android:fontFamily="@font/ridibatang"
-            android:layout_marginLeft="38dp"
+            android:text="96db7157597bba66a84ba2f968448b33ff8e6e25b3dd6a91d29d3a33d5d237bd"
             android:textSize="15dp"></TextView>
-        <TextView
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="튜토리얼"
+        android:layout_marginTop="85dp"
         android:fontFamily="@font/ridibatang"
-            android:layout_marginLeft="40dp"
+        android:text="2005.09.17"
+        android:textColor="@color/blue"
+        android:textSize="18dp"></TextView>
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:fontFamily="@font/ridibatang"
+        android:text="96db7157597bba66a84ba2f968448b33ff8e6e25b3dd6a91d29d3a33d5d237bd"
         android:textSize="15dp"></TextView>
-    </LinearLayout>
-
+</RelativeLayout>
 
 </RelativeLayout>
