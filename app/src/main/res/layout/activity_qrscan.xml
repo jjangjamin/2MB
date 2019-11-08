@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.a2mb.QRScannerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ridibatang"
+            android:textColor="@color/blue"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="블록체인 데이터베이스에 접근하기 위해 \n병원에서 제공받은 QR코드를 스캔해주세요." />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/textViewName"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ridibatang"
+            android:textColor="@color/blue"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="URL" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/textViewAddress"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ridibatang"
+            android:textColor="@color/blue"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="Info" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/textViewResult"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+    </LinearLayout>
+
+    <Button
+        android:text="스캔 시작"
+        android:textColor="@color/colorWhite"
+        android:fontFamily="@font/ridibatang"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/selector_state2"
+        android:id="@+id/buttonScan" />
+</RelativeLayout>

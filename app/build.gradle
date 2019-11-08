@@ -29,4 +29,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.+'
     implementation "com.cleveroad:slidingtutorial:1.0.9"
+    implementation 'com.journeyapps:zxing-android-embedded:3.4.0'
 }

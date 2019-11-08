@@ -10,6 +10,7 @@
     <!-- android test 돌릴 때 화면 lock 풀어야 로그인 touch 가능 -->
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -30,6 +31,8 @@
         <activity android:name=".LoadingActivity"></activity>
         <activity android:name=".MainActivity">
         </activity>
+        <activity android:name=".QRScannerActivity"></activity>
+        <activity android:name=".RecordActivity"/>
     </application>
 
 </manifest>
