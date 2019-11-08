@@ -66,12 +66,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             public void run(boolean success) {
                 if (success) {//로그인 성공
                     Toast.makeText(context,"로그인 되었습니다",Toast.LENGTH_SHORT).show();
-                    Intent mainIntent = new Intent(LoginActivity.this, MainActivity.class);
+                    Intent mainIntent = new Intent(LoginActivity.this, LoadingActivity.class);
                     startActivity(mainIntent);
                 } else {//로그인 실패
                     String errorCode = naverLoginInstance.getLastErrorCode(context).getCode();
                     String errorDesc = naverLoginInstance.getLastErrorDesc(context);
-                    Toast.makeText(context, "errorCode:" + errorCode + ", errorDesc:" + errorDesc, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "로그인 실패하였습니다.", Toast.LENGTH_SHORT).show();
                 }
             }
 
