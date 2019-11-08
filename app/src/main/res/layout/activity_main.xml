@@ -1,18 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorWhite"
     tools:context=".MainActivity">
 
-    <TextView
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="70dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/welcometext"
+            android:text="환영합니다."
+            android:textSize="45dp"
+            android:fontFamily="@font/ridibatang"
+            android:textColor="@color/blue" />
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/welcometext"
+            android:textSize="15dp"
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/ridibatang"
+            android:text="2MB에 접속하셨습니다.\n이제 자신의 의료 기록을 조회하실
+수 있고 \n나의 정보를 열람하실 수 있습니다."></TextView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonkit"
+        android:layout_marginTop="320dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/qrscan"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/qrscan" />
+
+        <ImageView
+            android:id="@+id/myinfo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="25dp"
+            app:srcCompat="@drawable/myinfo" />
+
+        <ImageView
+            android:id="@+id/tutorial"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_marginLeft="22dp"
+            app:srcCompat="@drawable/tutorial" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textfamily"
+        android:layout_marginTop="410dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="본인인증"
+            android:fontFamily="@font/ridibatang"
+            android:layout_marginLeft="32dp"
+            android:textSize="15dp"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나의 정보"
+            android:fontFamily="@font/ridibatang"
+            android:layout_marginLeft="38dp"
+            android:textSize="15dp"></TextView>
+        <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="튜토리얼"
+        android:fontFamily="@font/ridibatang"
+            android:layout_marginLeft="40dp"
+        android:textSize="15dp"></TextView>
+    </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
