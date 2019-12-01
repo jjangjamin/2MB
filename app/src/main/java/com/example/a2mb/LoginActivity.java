@@ -1,5 +1,6 @@
 package com.example.a2mb;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -59,14 +60,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     //변수 붙이기
     private void init_View(){
         naverLogInButton = (OAuthLoginButton)findViewById(R.id.buttonNaverLogin);
-
         //로그인 핸들러
-        OAuthLoginHandler naverLoginHandler  = new OAuthLoginHandler() {
+        @SuppressLint("HandlerLeak") OAuthLoginHandler naverLoginHandler  = new OAuthLoginHandler() {
             @Override
             public void run(boolean success) {
                 if (success) {//로그인 성공
+                    new RequestApiTask().execute();
                     Toast.makeText(context,"로그인 되었습니다",Toast.LENGTH_SHORT).show();
                     Intent mainIntent = new Intent(LoginActivity.this, LoadingActivity.class);
+                    Log.d("string", "YOU ARE IN!!!");
                     startActivity(mainIntent);
                 } else {//로그인 실패
                     String errorCode = naverLoginInstance.getLastErrorCode(context).getCode();
@@ -99,10 +101,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
     private class RequestApiTask extends AsyncTask<Void, Void, String> {
-        @Override
-        protected void onPreExecute() {//작업이 실행되기 전에 먼저 실행.
-            tv_mail.setText((String) "");//메일 란 비우기
-        }
+       // @Override
+        //protected void onPreExecute() {//작업이 실행되기 전에 먼저 실행.
+         //   tv_mail.setText((String) "");//메일 란 비우기
+        //}
 
         @Override
         protected String doInBackground(Void... params) {//네트워크에 연결하는 과정이 있으므로 다른 스레드에서 실행되어야 한다.
@@ -116,6 +118,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 JSONObject jsonObject = new JSONObject(content);
                 JSONObject response = jsonObject.getJSONObject("response");
                 String email = response.getString("email");
+                Log.d(email, email);
                 tv_mail.setText(email);//메일 란 채우기
             }
             catch (Exception e){

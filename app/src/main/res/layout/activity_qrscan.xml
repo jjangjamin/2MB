@@ -53,13 +53,6 @@
             android:layout_marginLeft="10dp"
             android:text="Info" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:id="@+id/textViewResult"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
-
     </LinearLayout>
 
     <Button

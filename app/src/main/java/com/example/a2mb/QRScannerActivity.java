@@ -34,7 +34,7 @@ public class QRScannerActivity extends AppCompatActivity {
         buttonScan = (Button) findViewById(R.id.buttonScan);
         textViewName = (TextView) findViewById(R.id.textViewName);
         textViewAddress = (TextView) findViewById(R.id.textViewAddress);
-        textViewResult = (TextView)  findViewById(R.id.textViewResult);
+       // textViewResult = (TextView)  findViewById(R.id.textViewResult);
 
         //intializing scan object
         qrScan = new IntentIntegrator(this);
@@ -60,9 +60,9 @@ public class QRScannerActivity extends AppCompatActivity {
                 Toast.makeText(QRScannerActivity.this, "취소!", Toast.LENGTH_SHORT).show();
             } else {
                 //qrcode 결과가 있으면
-                Toast.makeText(QRScannerActivity.this, "스캔완료!", Toast.LENGTH_SHORT).show();
-                Intent mainIntent = new Intent(QRScannerActivity.this, RecordActivity.class);
-                startActivity(mainIntent);
+                Toast.makeText(QRScannerActivity.this, "'QR코드를 확인 후 다시 시도해 주십시오.\n(오류 1회 / 5회)", Toast.LENGTH_SHORT).show();
+               // Intent mainIntent = new Intent(QRScannerActivity.this, RecordActivity.class);
+               // startActivity(mainIntent);
                 try {
                     //data를 json으로 변환
                     JSONObject obj = new JSONObject(result.getContents());
@@ -72,7 +72,7 @@ public class QRScannerActivity extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                     //Toast.makeText(MainActivity.this, result.getContents(), Toast.LENGTH_LONG).show();
-                    textViewResult.setText(result.getContents());
+                  //  textViewResult.setText(result.getContents());
                 }
             }
 
